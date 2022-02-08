@@ -26,12 +26,6 @@ namespace Dungeon_Library
             set { _name = value; }
         }
 
-        public int BonusHitChance
-        {
-            get { return _bonusHitChance; }
-            set { _bonusHitChance = value; }
-        }
-
         public bool IsTwoHanded
         {
             get { return _isTwoHanded; }
@@ -63,7 +57,7 @@ namespace Dungeon_Library
         //CONSTRUCTORS
         //Create a fully qualified constructor (FQCTOR)
 
-        public Weapons(int minDamage, int maxDamage, string name, int bonusHitChance, bool isTwoHanded)
+        public Weapons(int minDamage, int maxDamage, string name, bool isTwoHanded)
         {
             //Here. the Properties are being assigned the value of the PARAMETERS
             //When we use the constructor to create a Weapon object, we MUST provide
@@ -78,7 +72,6 @@ namespace Dungeon_Library
             //minDamage
             MinDamage = minDamage;
             Name = name;
-            BonusHitChance = bonusHitChance;
             IsTwoHanded = isTwoHanded;
 
         }
@@ -94,11 +87,10 @@ namespace Dungeon_Library
         {
             //return base.ToString();
             return string.Format("{0}\t{1} to {2} Damage\n" +
-                "Bonus Hit: {3}%\t{4}",
+                "\t{4}",
                 Name,
                 MinDamage,
                 MaxDamage,
-                BonusHitChance,
                 IsTwoHanded ? "Two-Handed" : "One-Handed");
         }
 

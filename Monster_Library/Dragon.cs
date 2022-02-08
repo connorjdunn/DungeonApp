@@ -16,6 +16,7 @@ namespace Monster_Library
             Name = "Dragon";
             MaxLife = 150;
             MaxDamage = 40;
+            MinDamage = 20;
             Life = 150;
             Description = "Flying beast... is it hot in here or is it just me?";
         }

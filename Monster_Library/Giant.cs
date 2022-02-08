@@ -15,6 +15,7 @@ namespace Monster_Library
             Name = "Giant";
             MaxLife = 70;
             MaxDamage = 25;
+            MinDamage = 10;
             Life = 70;
             Description = "A humanoid looking creature... only larger";
         }

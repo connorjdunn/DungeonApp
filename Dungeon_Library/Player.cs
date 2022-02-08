@@ -8,7 +8,7 @@ namespace Dungeon_Library
 {
     public class Player : Character
     {
-        {
+        
 
         //FIELDS
         //Attributes: Name, HitChance, Block, Life, MaxLife, Race, Weapon
@@ -31,7 +31,7 @@ namespace Dungeon_Library
 
         public Race CharacterRace { get; set; }
 
-        public Weapon EquippedWeapon { get; set; }
+        public Weapons EquippedWeapon { get; set; }
 
         //You CANNOT have buisness rules with automatic properties.
         //If you need buisness rules, you MUST have the field declared
@@ -60,8 +60,8 @@ namespace Dungeon_Library
         //ONLY MAKE A FULLY QUALIFIED CONSTRUCTOR
         //We don't want to allow anyone to make a blank Player, so they MUST
         //give us all of the info necessary
-        public Player(string name, int hitChance, int block, int life, int maxLife,
-            Race characterRace, Weapon equippedWeapon)
+        public Player(string name, int life, int maxLife,
+            Race characterRace, Weapons equippedWeapon)
         {
             //Since Life depends on MaxLife, SET MAXLIFE FIRST
             MaxLife = maxLife;
@@ -84,35 +84,23 @@ namespace Dungeon_Library
                 case Race.Khajit:
                     description = "Khajit";
                     break;
-                case Race.Dwarf:
-                    description = "Dwarf";
-                    break;
                 case Race.Human:
                     description = "Human";
                     break;
-                case Race.Orc:
-                    description = "Orc";
-                    break;
                 case Race.Giant:
                     description = "Giant";
-                    break;
-                case Race.Troll:
-                    description = "Troll";
                     break;
                 default:
                     break;
             }//end switch
 
             return string.Format("-=-= {0} =-=-\n" +
-                "Life: {1} of {2}\nHit Chance: {3}%\n" +
-                "Weapon: \n{4}\nBlock: {5}\nDescription: {6}",
+                "Life: {1} of {2}\n" +
+                "Weapon: \n{4}\n\nDescription: {5}",
                 Name,
                 Life,
                 MaxLife,
-                HitChance,
-                //Hit Chance
                 EquippedWeapon,
-                Block,
                 description);
 
         }//end ToString()
@@ -136,11 +124,6 @@ namespace Dungeon_Library
 
         }
 
-        public override int CalcHitChance()
-        {
-            //return base.CalcHitChance();
 
-            return base.CalcHitChance() + EquippedWeapon.BonusHitChance;
-        }
     }
 }

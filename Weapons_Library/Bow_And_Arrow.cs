@@ -15,8 +15,8 @@ namespace Weapons_Library
 
         
 
-        public Bow_And_Arrow(int minDamage, int maxDamage, string name, int bonusHitChance, bool isTwoHanded)
-            : base(minDamage, maxDamage, name, bonusHitChance, isTwoHanded)
+        public Bow_And_Arrow(int minDamage, int maxDamage, string name, bool isTwoHanded)
+            : base(minDamage, maxDamage, name, isTwoHanded)
         {
             //Here. the Properties are being assigned the value of the PARAMETERS
             //When we use the constructor to create a Weapon object, we MUST provide
@@ -31,7 +31,6 @@ namespace Weapons_Library
             //minDamage
             MinDamage = minDamage;
             Name = name;
-            BonusHitChance = bonusHitChance;
             IsTwoHanded = true;
              
 

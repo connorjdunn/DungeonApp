@@ -8,14 +8,11 @@ namespace Dungeon_Library
 {
     public enum Race
     {
-        //Sing values, No spaces in the value, comma seperated
+        //String values, No spaces in the value, comma seperated
 
         Elf,
         Khajit,
-        Dwarf,
         Human,
-        Orc,
         Giant,
-        Troll
     }
 }

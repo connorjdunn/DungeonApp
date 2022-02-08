@@ -15,6 +15,7 @@ namespace Monster_Library
             Name = "Harpy";
             MaxLife = 40;
             MaxDamage = 15;
+            MinDamage = 10;
             Life = 40;
             Description = "A humanoid looking creature... wait are those wings?";
         }
