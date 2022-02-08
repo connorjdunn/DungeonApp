@@ -20,5 +20,10 @@ namespace Monster_Library
             Description = "Flying beast... is it hot in here or is it just me?";
         }
 
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
     }
 }
