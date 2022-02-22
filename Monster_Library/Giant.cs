@@ -10,6 +10,12 @@ namespace Monster_Library
     public class Giant : Monster
     {
         public Giant(string name, int life, int maxLife, int minDamage, int maxDamage, string description)
+                        : base(name, life, maxLife, minDamage, maxDamage, description)
+        {
+
+        }
+
+        public Giant()
 
         {
             Name = "Giant";

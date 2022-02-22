@@ -47,11 +47,10 @@ namespace Weapons_Library
         {
             //return base.ToString();
             return string.Format("{0}\t{1} to {2} Damage\n" +
-                "Bonus Hit: {3}%\t{4}",
+                "Is Two Handed? {3}" ,
                 Name,
                 MinDamage,
                 MaxDamage,
-                BonusHitChance,
                 IsTwoHanded ? "Two-Handed" : "One-Handed");
         }
 

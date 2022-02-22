@@ -72,7 +72,7 @@ namespace Dungeon_Library
 
             return string.Format("\n******** MONSTER ********\n" +
                 "{0}\nLife: {1} of {2}\nDamage: {3} to {4}\n" +
-                "Block: {5}\nDescription:\n{6}\n",
+                "Description: {5}",
                 Name,
                 Life,
                 MaxLife,
@@ -87,7 +87,9 @@ namespace Dungeon_Library
 
             Random rand = new Random();
 
-            return rand.Next(MinDamage, MaxDamage + 1);
+            int damage = rand.Next(MinDamage, MaxDamage + 1);
+
+            return damage;
         }
 
     }

@@ -33,6 +33,8 @@ namespace Dungeon_Library
 
         public Weapons EquippedWeapon { get; set; }
 
+        public string Description { get; set; }
+
         //You CANNOT have buisness rules with automatic properties.
         //If you need buisness rules, you MUST have the field declared
         //aboce and write the property the "long way"
@@ -61,7 +63,7 @@ namespace Dungeon_Library
         //We don't want to allow anyone to make a blank Player, so they MUST
         //give us all of the info necessary
         public Player(string name, int life, int maxLife,
-            Race characterRace, Weapons equippedWeapon)
+            Race characterRace, Weapons equippedWeapon, string description)
         {
             //Since Life depends on MaxLife, SET MAXLIFE FIRST
             MaxLife = maxLife;
@@ -69,6 +71,7 @@ namespace Dungeon_Library
             Life = life;
             CharacterRace = characterRace;
             EquippedWeapon = equippedWeapon;
+            Description = description;
         }
 
         
@@ -96,12 +99,16 @@ namespace Dungeon_Library
 
             return string.Format("-=-= {0} =-=-\n" +
                 "Life: {1} of {2}\n" +
-                "Weapon: \n{4}\n\nDescription: {5}",
+                "Race: {3}\n" + 
+                "Weapon: \n{4}" +
+                "Description: {5}",
                 Name,
                 Life,
                 MaxLife,
+                CharacterRace,
                 EquippedWeapon,
-                description);
+                Description
+                );
 
         }//end ToString()
 

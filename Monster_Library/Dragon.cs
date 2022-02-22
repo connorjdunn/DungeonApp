@@ -11,6 +11,12 @@ namespace Monster_Library
     {
 
         public Dragon(string name, int life, int maxLife, int minDamage, int maxDamage, string description)
+                        : base(name, life, maxLife, minDamage, maxDamage, description)
+        {
+
+        }
+
+        public Dragon()
             
         {
             Name = "Dragon";

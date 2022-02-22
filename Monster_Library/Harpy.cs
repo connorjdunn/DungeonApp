@@ -7,10 +7,15 @@ using Dungeon_Library;
 
 namespace Monster_Library
 {
-    class Harpy : Monster
+    public class Harpy : Monster
     {
         public Harpy(string name, int life, int maxLife, int minDamage, int maxDamage, string description)
+                        : base(name, life, maxLife, minDamage, maxDamage, description)
+        {
 
+        }
+
+        public Harpy()
         {
             Name = "Harpy";
             MaxLife = 40;
