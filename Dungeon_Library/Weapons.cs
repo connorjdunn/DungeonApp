@@ -76,6 +76,11 @@ namespace Dungeon_Library
 
         }
 
+         public Weapons()
+        {
+
+        }
+
         //NO DEFAULT CONSTUCTOR! We do not want anyone to make
         //a blank weapon that is missing any of the info related
         //to that weapon.
@@ -87,7 +92,7 @@ namespace Dungeon_Library
         {
             //return base.ToString();
             return string.Format("{0}\t{1} to {2} Damage\n" +
-                "\t{4}",
+                "\t{3}\n",
                 Name,
                 MinDamage,
                 MaxDamage,

@@ -31,7 +31,7 @@ namespace Weapons_Library
             //minDamage
             MinDamage = minDamage;
             Name = name;
-            IsTwoHanded = true;
+            IsTwoHanded = isTwoHanded;
              
 
         }
